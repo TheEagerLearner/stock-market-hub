@@ -11,6 +11,7 @@ const SplashScreen = () => {
                 name={'Sail.ns'}
                 open={100}
                 current={100.1}
+                buy={true}
            />
         </View>
     );

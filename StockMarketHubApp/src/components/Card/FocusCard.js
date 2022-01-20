@@ -27,8 +27,8 @@ const FocusCard = ({name,open,current,buy}) =>{
                 top:10,
                 paddingHorizontal:15,
                 paddingVertical:8,
-                borderRadius:4,
-                backgroundColor:buy?'#32c641':'#e93c1',
+                borderRadius:10,
+                backgroundColor:buy?'#32c641':'#e93c31',
             }}>
                 <Text
                     style={{fontWeight:'bold',color:'white'}}
@@ -40,7 +40,7 @@ const FocusCard = ({name,open,current,buy}) =>{
                 <View >
                     <View style={stylesheet.detailStyle}>
                         <Text style={{fontWeight:'bold',fontSize:16}}>High : </Text>
-                        <Text style={{fontSize:16}}>{high}</Text>
+                        <Text style={{fontSize:16}}>{open}</Text>
                     </View>
                     
                     <View style={stylesheet.detailStyle}>
@@ -78,7 +78,7 @@ const stylesheet = StyleSheet.create({
     nameStyle:{
         marginLeft:15,
         fontWeight:'bold',
-        marginBottom:20,
+        marginBottom:4,
         fontSize:18,
         marginTop:10,
         

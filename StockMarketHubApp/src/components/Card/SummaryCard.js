@@ -27,7 +27,7 @@ const SummaryCard = ({name,high,low,open,current,buy}) =>{
                 top:10,
                 paddingHorizontal:15,
                 paddingVertical:8,
-                borderRadius:4,
+                borderRadius:10,
                 backgroundColor:buy?'#32c641':'#e93c1',
             }}>
                 <Text
