@@ -22,7 +22,7 @@ const SummaryCard = ({name,high,low,open,current,buy}) =>{
             <Text style={stylesheet.nameStyle}>{name}</Text>
             <View style={{
                 borderWidth:0,
-                position:'absolute',
+                position:'relative',
                 right:10,
                 top:10,
                 paddingHorizontal:15,
