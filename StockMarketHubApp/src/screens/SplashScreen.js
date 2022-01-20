@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View,StyleSheet,Text} from 'react-native';
-import DetailCard from '../components/Card/DetailCard';
+
 
 const SplashScreen = () => {
+
+    const [stock,setStock] = useState('');
 
     return(
         <View style={stylesheet.mainView}>
 
-        <DetailCard 
-            high={100}
-            low={200}
-            open={100}
-            current={150}
-        />
+
+
         </View>
     );
 }
