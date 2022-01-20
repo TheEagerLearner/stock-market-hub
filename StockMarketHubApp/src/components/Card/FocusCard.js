@@ -4,14 +4,12 @@ import {View,StyleSheet,Text,TouchableOpacity} from 'react-native';
 
 /*
     USAGE
-    <SummaryCard 
-        name={'TATAPOWER.NS'}
-        high={200.21}
-        low={101.2}
-        open={190.1}
-        current={199.1}
-        buy={true}
-    />
+           <FocusCard 
+                name={'Sail.ns'}
+                open={100}
+                current={100.1}
+                buy={true}
+           />
 
 */
 
@@ -24,9 +22,9 @@ const FocusCard = ({name,open,current,buy}) =>{
                 borderWidth:0,
                 position:'absolute',
                 right:10,
-                top:10,
-                paddingHorizontal:15,
-                paddingVertical:8,
+                top:15,
+                paddingHorizontal:8,
+                paddingVertical:4,
                 borderRadius:10,
                 backgroundColor:buy?'#32c641':'#e93c31',
             }}>
@@ -73,19 +71,19 @@ const stylesheet = StyleSheet.create({
         shadowOpacity: 0,
         shadowRadius: 0,
         elevation: 24,
-        width:'60%'
+        width:250,
     },
     nameStyle:{
         marginLeft:15,
         fontWeight:'bold',
-        marginBottom:4,
+        marginBottom:0,
         fontSize:18,
         marginTop:10,
         
     },
     detailStyle:{
         flexDirection:'row',
-        margin:5,
+        marginLeft:5,
         
     },
     row:{
