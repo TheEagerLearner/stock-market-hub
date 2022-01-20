@@ -1,18 +1,18 @@
 import React from 'react';
 import {View,StyleSheet,Text} from 'react-native';
-import FocusCard from '../components/Card/FocusCard';
-import SummaryCard from '../components/Card/SummaryCard';
+import DetailCard from '../components/Card/DetailCard';
 
 const SplashScreen = () => {
 
     return(
         <View style={stylesheet.mainView}>
-           <FocusCard 
-                name={'Sail.ns'}
-                open={100}
-                current={100.1}
-                buy={true}
-           />
+
+        <DetailCard 
+            high={100}
+            low={200}
+            open={100}
+            current={150}
+        />
         </View>
     );
 }
