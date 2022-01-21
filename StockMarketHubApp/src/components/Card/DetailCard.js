@@ -9,26 +9,26 @@ const DetailCard = ({high,low,current,open}) =>{
         <View style={stylesheet.row}>
             <View >
                 <View style={stylesheet.detailStyle}>
-                    <Text style={{fontWeight:'bold',fontSize:16,color:'white'}}>High : </Text>
-                    <Text style={{fontSize:16,color:'white'}}>{high}</Text>
+                    <Text style={{fontWeight:'bold',fontSize:18,color:'white'}}>High : </Text>
+                    <Text style={{fontSize:18,color:'white'}}>{high}</Text>
                 </View>
                 
                 <View style={stylesheet.detailStyle}>
-                    <Text style={{fontWeight:'bold',fontSize:16,color:'white'}}>Low : </Text>
-                    <Text style={{fontSize:16,color:'white'}}>{low}</Text>
+                    <Text style={{fontWeight:'bold',fontSize:18,color:'white'}}>Low : </Text>
+                    <Text style={{fontSize:18,color:'white'}}>{low}</Text>
                 </View>
             </View>
         
 
             <View>
                 <View style={stylesheet.detailStyle}>
-                    <Text style={{fontWeight:'bold',fontSize:16,color:'white'}}>Open : </Text>
-                    <Text style={{fontSize:16,color:'white'}}>{open}</Text>
+                    <Text style={{fontWeight:'bold',fontSize:18,color:'white'}}>Open : </Text>
+                    <Text style={{fontSize:18,color:'white'}}>{open}</Text>
                 </View>
                 
                 <View style={stylesheet.detailStyle}>
-                    <Text style={{fontSize:16,color:'white'}}>Current Price : </Text>
-                    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>{current}</Text>
+                    <Text style={{fontSize:18,color:'white'}}>Current Price : </Text>
+                    <Text style={{fontWeight:'bold',color:'white',fontSize:18}}>{current}</Text>
                 </View>
             </View>
         </View>
@@ -47,6 +47,7 @@ const stylesheet = StyleSheet.create({
         margin:20,
         //marginTop:100,
         backgroundColor:'#a5a9ff',
+        width:'95%'
         
     },
     detailStyle:{

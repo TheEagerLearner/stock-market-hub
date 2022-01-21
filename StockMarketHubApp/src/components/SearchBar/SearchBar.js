@@ -18,12 +18,12 @@ Usage
             />
 */
 
-const SearchBar=({onChange,endEdit})=>{
+const SearchBar=({onChange,endEdit,style})=>{
 
 
     
     return(
-    <View style={stylesheet.input}>
+    <View style={[stylesheet.input,style]}>
     <Feather style={stylesheet.iconStyle} name="search" size={30}/>
     <TextInput
         style={stylesheet.inputStyle} 
@@ -48,7 +48,7 @@ const stylesheet=StyleSheet.create({
         borderWidth:1,
         height:50,
         backgroundColor:"#EEEEEE",
-        margin:20,
+        margin:10,
         borderRadius:90,
         flexDirection:'row',
         justifyContent:'center'
@@ -62,7 +62,8 @@ const stylesheet=StyleSheet.create({
         flex:1,
         marginHorizontal:10,
         fontSize:16,
-        color:'#8f959e'
+        color:'black',
+        
     }
 });
 

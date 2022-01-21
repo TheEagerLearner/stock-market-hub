@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {View,StyleSheet,Text,Image,StatusBar} from 'react-native';
 import GetStarted from '../components/Card/GetStarted';
 
-const SplashScreen = () => {
+const SplashScreen = (props) => {
 
-    const [stock,setStock] = useState('');
 
     return(
         <View style={stylesheet.mainView}>
@@ -29,7 +28,7 @@ const SplashScreen = () => {
 
             <GetStarted 
                 style={stylesheet.buttonStyle}
-                onPress={()=>{console.log("Get Started tapped")}}
+                onPress={()=>{props.navigation.navigate('Home')}}
             />
 
         </View>

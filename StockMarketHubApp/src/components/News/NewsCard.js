@@ -15,7 +15,10 @@ const NewsCard=({news})=>{
     return(
     <View style={stylesheet.mainStyle}>
     
-        <Text>{news}</Text>
+        <Text style={{
+            color:'white',
+            fontSize:16,
+        }}>{news}</Text>
 
     </View>
     );
@@ -23,7 +26,7 @@ const NewsCard=({news})=>{
 
 const stylesheet=StyleSheet.create({
 mainStyle:{
-    borderLeftWidth:5,
+    borderLeftWidth:3,
     justifyContent:'center',
     padding:10,
     width:'100%',
