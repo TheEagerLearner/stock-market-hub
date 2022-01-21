@@ -1,14 +1,18 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 
-const GetStarted = () => {
+const GetStarted = ({style,onPress}) => {
     return(
-        <View style={styles.main}>
-            <View style={styles.button}>
-                <Text style={styles.textStyle}>GET STARTED</Text>
-                <AntDesign name="right" size={30} color="black" style={styles.icon} />
-            </View>
+        <View style={[styles.main,style]}>
+            <TouchableOpacity
+                onPress={onPress}
+            >
+                <View style={styles.button}>
+                    <Text style={styles.textStyle}>GET STARTED</Text>
+                    <AntDesign name="right" size={30} color="black" style={styles.icon} />
+                </View>
+            </TouchableOpacity>
         </View>
     )
 }
