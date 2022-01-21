@@ -66,7 +66,7 @@ const Home = (props,{}) => {
                     setStock(value);
                 }}
                 endEdit={()=>{
-                    props.navigation.navigate('SearchScreen');
+                    props.navigation.navigate('SearchScreen',{'stockName':stock});
                 }}
                 style={stylesheet.searchbarStyle}
             />

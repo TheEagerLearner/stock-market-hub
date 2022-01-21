@@ -3,8 +3,9 @@ import {View,StyleSheet,Text,StatusBar} from 'react-native';
 import DetailCard from '../components/Card/DetailCard';
 import TitleBar from '../components/TitleBar/TitleBar';
 
-const SearchScreen = ({}) => {
+const SearchScreen = (props,{}) => {
 
+    const stockName=props.navigation.getParam('stockName');
     return(
         <View style={stylesheet.mainStyle}>
             <StatusBar 
@@ -13,11 +14,14 @@ const SearchScreen = ({}) => {
             />
 
         <TitleBar 
-            title="Dashboard"
-            onPress={()=>{console.log("Tapped")}}
-            lightTheme={true}
+            title={stockName}
+            onPress={()=>{props.navigation.navigate('Home')}}
+            lightTheme={false}
             style={{
                 color:'#fff',
+                //borderWidth:2,
+                //borderColor:'white',
+                width:'100%'
                 
             }}
         />
