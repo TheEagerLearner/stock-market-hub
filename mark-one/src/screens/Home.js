@@ -4,52 +4,78 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import NewsCard from '../components/News/NewsCard';
 import FocusCard from '../components/Card/FocusCard';
 
-//Dummy data for now
-const dummy='Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
-const data=[
-    {key:1,text:dummy},
-    {key:2,text:dummy},
-    {key:3,text:dummy},
-    
-];
-const stockdata=[
-    {
-        key:1,
-        name:'SAIL.NS',
-        buy:true,
-        current:100,
-        open:102
-    },
-    {
-        key:2,
-        name:'TATAPOWER.NS',
-        buy:false,
-        current:100,
-        open:102
-    },
-    {
-        key:3,
-        name:'GAIL.NS',
-        buy:true,
-        current:100,
-        open:102
-    },
-    {
-        key:4,
-        name:'WIPRO',
-        buy:false,
-        current:100,
-        open:102
-    },
-
-
-    
-];
-
-
 const Home = (props,{}) => {
 
     const [stock,setStock] = useState('');
+
+    //Dummy data for now
+    const dummy='Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
+    const data=[
+        {key:1,text:dummy},
+        {key:2,text:dummy},
+        {key:3,text:dummy},
+        
+    ];
+    const stockdata=[
+        {
+            key:1,
+            name:'SAIL.NS',
+            buy:true,
+            current:100,
+            open:102
+        },
+        {
+            key:2,
+            name:'TATAPOWER.NS',
+            buy:false,
+            current:100,
+            open:102
+        },
+        {
+            key:3,
+            name:'GAIL.NS',
+            buy:true,
+            current:100,
+            open:102
+        },
+        {
+            key:4,
+            name:'WIPRO',
+            buy:false,
+            current:100,
+            open:102
+        },
+
+
+        
+    ];
+
+    const RenderFocusCard = ({item})=>{
+        return(
+
+            <FocusCard 
+                name={item.name}
+                open={item.open}
+                current={item.current}
+                buy={item.buy}
+        />
+
+        );
+    }
+
+    const RenderNews = ({item})=>{
+        return(
+            <NewsCard 
+            news={item.text}
+        />
+
+        );
+    }
+
+    const setStockValue = (value)=>{
+        console.log(value);
+        setStock(value);
+    }
 
 
     return(
@@ -61,10 +87,7 @@ const Home = (props,{}) => {
             />
 
             <SearchBar 
-                onChange={(value)=>{
-                    console.log(value);
-                    setStock(value);
-                }}
+                onChange={setStockValue}
                 endEdit={()=>{
                     props.navigation.navigate('SearchScreen',{'stockName':stock});
                 }}
@@ -78,14 +101,7 @@ const Home = (props,{}) => {
                 <FlatList 
                     keyExtractor={item=>item.key}
                     data={data}
-                    renderItem={({item})=>{
-                        return(
-                            <NewsCard 
-                            news={item.text}
-                        />
-                
-                        );
-                    }}
+                    renderItem={RenderNews}
                 />
             </View>
 
@@ -97,18 +113,7 @@ const Home = (props,{}) => {
                     keyExtractor={item=>item.key}
                     data={stockdata}
                     horizontal={true}
-                    renderItem={({item})=>{
-                        return(
-
-                            <FocusCard 
-                                name={item.name}
-                                open={item.open}
-                                current={item.current}
-                                buy={item.buy}
-                           />
-            
-                        );
-                    }}
+                    renderItem={RenderFocusCard}
                 />
             </View>
 
